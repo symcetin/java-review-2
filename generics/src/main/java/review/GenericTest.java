@@ -22,11 +22,20 @@ public class GenericTest {
 
         //printInfo(studentList);
 
-        printInfos(studentList);
-        printInfos(teacherList);
+        //printInfos(studentList);
+        //printInfos(teacherList);
 
-        System.out.println(getLastItem(studentList).getName());
-        System.out.println(getLastItem(teacherList).getName());
+        //System.out.println(getLastItem(studentList).getName());
+        //System.out.println(getLastItem(teacherList).getName());
+
+        MyUtils<Student> obj1 = new MyUtils<>();
+
+        obj1.printInfos(studentList);
+
+        MyUtils<Teacher> obj2 = new MyUtils<>();
+        System.out.println(obj2.getLastItem(teacherList).getName());
+
+
     }
 
     //write a method takes list of students, print each student and total count
