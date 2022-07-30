@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenericTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         List<Student> studentList = new ArrayList<>();
 
@@ -31,9 +31,13 @@ public class GenericTest {
         MyUtils<Student> obj1 = new MyUtils<>();
 
         obj1.printInfos(studentList);
+        System.out.println(obj1.getLastItemName(studentList));
+
 
         MyUtils<Teacher> obj2 = new MyUtils<>();
         System.out.println(obj2.getLastItem(teacherList).getName());
+
+        MyUtils<String> obj3 = new MyUtils<>();
 
 
     }
